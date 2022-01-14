@@ -243,7 +243,7 @@ contract MonsterNFT is ERC721Enumerable, PaymentSplitter, Ownable, ReentrancyGua
             sellingStep = Steps.SoldOut;   
         }
         //Minting all the account NFTs
-        for(uint i = 1 ; i < _ammount ; i++) {
+        for(uint i = 1 ; i <= _ammount ; i++) {
             _safeMint(msg.sender, numberNftSold + i);
         }
     }
